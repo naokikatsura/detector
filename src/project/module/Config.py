@@ -72,7 +72,7 @@ class Config:
 		self.LOSS_FUNC = "binary_crossentropy"
 
 		# モデル保存先
-		self.MODEL_DIR_PATH = "C:/Users/naoki/DETECTOR/model/"
+		self.MODEL_DIR_PATH = "PATH/TO/detector/model/"
 
 		# モデルファイル名
 		self.MODEL_BEST_FILENAME = "model_best.keras"
@@ -96,8 +96,8 @@ class Config:
 		# ファイル選択・シャッフルに使用するランダムシード
 		self.RANDOM_SEED = 100
 		# 陽性・陰性データファイル格納先
-		self.POS_DIR_PATH = "E:/data/train/positive_formatted"
-		self.NEG_DIR_PATH = "E:/data/train/negative_formatted"
+		self.POS_DIR_PATH = "PATH/TO/detector/data/train/positive_formatted"
+		self.NEG_DIR_PATH = "PATH/TO/detector/data/train/negative_formatted"
 		# 陽性・陰性データ数
 		self.NUM_POS = 8192*4
 		self.NUM_NEG = 8192*4
@@ -115,17 +115,17 @@ class Config:
 		OUTPUT:	None
 		"""
 		# 訓練済みモデル保存先
-		self.TRAINED_MODEL_DIR_PATH = "C:/Users/naoki/DETECTOR/model/20260307_103200"
+		self.TRAINED_MODEL_DIR_PATH = "PATH/TO/detector/model/YYYYMMDD_HHMMSS"
 		# 訓練済みモデルファイル名
 		self.TRAINED_MODEL_FILENAME = "model_best.keras"
 		# 入力ファイル格納先
-		self.INPUT_POS_DIR_PATH = "E:/data/test/positive_formatted"
-		self.INPUT_NEG_DIR_PATH = "E:/data/test/negative_formatted"
+		self.INPUT_POS_DIR_PATH = "PATH/TO/detector/data/test/positive_formatted"
+		self.INPUT_NEG_DIR_PATH = "PATH/TO/detector/data/test/negative_formatted"
 		# 入力ファイル数
 		self.NUM_INPUT_POS = 1000
 		self.NUM_INPUT_NEG = 1000
 		# 結果出力先
-		self.OUTPUT_DIR_PATH = "C:/Users/naoki/DETECTOR/output"
+		self.OUTPUT_DIR_PATH = "PATH/TO/detector/output"
 
 
 	def saveConfig(self):
@@ -141,7 +141,7 @@ class Config:
 		# ログファイル名を設定
 		output_filename = "./config_{}_{}.log".format(self.START_TIME, description)
 		# ログファイル出力先
-		self.LOG_DIR = "C:/Users/naoki/DETECTOR/log/{}".format(self.START_TIME)
+		self.LOG_DIR = "PATH/TO/detector/DETECTOR/log/{}".format(self.START_TIME)
 		os.makedirs(self.LOG_DIR, exist_ok=True)
 		# ログファイルパスを設定
 		output_file_path = self.LOG_DIR + output_filename
@@ -164,3 +164,4 @@ class Config:
 
 		# コンフィグを保存
 		self.saveConfig()
+
